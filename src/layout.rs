@@ -92,11 +92,6 @@ impl Col {
         self.node.height = h;
         self
     }
-
-    pub fn margin(mut self, margin: UiRect) -> Self {
-        self.node.margin = margin;
-        self
-    }
 }
 
 /// A helper bundle for a flexbox row (horizontal stack).
