@@ -6,6 +6,9 @@ use bevy::prelude::*;
 pub struct FluentButton {
     pub button: Button,
     pub node: Node,
+    pub background_color: BackgroundColor,
+    pub border_color: BorderColor,
+    pub border_radius: BorderRadius,
     pub global_transform: GlobalTransform,
     pub visibility: Visibility,
     pub inherited_visibility: InheritedVisibility,
@@ -22,11 +25,11 @@ impl Default for FluentButton {
                 align_items: AlignItems::Center,
                 border: UiRect::all(Val::Px(1.0)),
                 padding: UiRect::axes(Val::Px(12.0), Val::Px(8.0)), // Default comfy padding
-                background_color: Color::NONE,
-                border_color: Color::WHITE,
-                border_radius: BorderRadius::all(Val::Px(4.0)),
                 ..default()
             },
+            background_color: BackgroundColor(Color::NONE),
+            border_color: BorderColor(Color::WHITE),
+            border_radius: BorderRadius::all(Val::Px(4.0)),
             global_transform: default(),
             visibility: default(),
             inherited_visibility: default(),
@@ -50,20 +53,20 @@ impl FluentButton {
 
     /// Sets the button's background color.
     pub fn bg(mut self, color: Color) -> Self {
-        self.node.background_color = color;
+        self.background_color = BackgroundColor(color);
         self
     }
 
     /// Sets the button's border color and width.
     pub fn border(mut self, color: Color, width: f32) -> Self {
-        self.node.border_color = color;
+        self.border_color = BorderColor(color);
         self.node.border = UiRect::all(Val::Px(width));
         self
     }
 
     /// Sets the border radius.
     pub fn rounded(mut self, px: f32) -> Self {
-        self.node.border_radius = BorderRadius::all(Val::Px(px));
+        self.border_radius = BorderRadius::all(Val::Px(px));
         self
     }
 
