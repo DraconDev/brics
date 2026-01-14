@@ -337,7 +337,7 @@ pub fn update_segmented_bars(
             let alpha = 0.5 + 0.5 * (t * 5.0).sin();
             for (i, child) in children.iter().enumerate() {
                 if i < bar.current_chunk {
-                    if let Ok(mut bg) = bg_query.get_mut(*child) {
+                    if let Ok(mut bg) = bg_query.get_mut(child) {
                         bg.0 = bg.0.with_alpha(alpha);
                     }
                 }
