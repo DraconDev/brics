@@ -74,6 +74,11 @@ impl FluentButton {
         self.node.padding = UiRect::all(Val::Px(px));
         self
     }
+
+    pub fn with_transform(mut self, transform: Transform) -> Self {
+        self.transform = transform;
+        self
+    }
 }
 
 /// A fluent builder for creating Text.
@@ -140,6 +145,11 @@ impl FluentLabel {
         self.layout.justify = Justify::Center;
         self
     }
+
+    pub fn with_transform(mut self, transform: Transform) -> Self {
+        self.transform = transform;
+        self
+    }
 }
 
 /// A progress bar / telemetry indicator.
@@ -188,6 +198,11 @@ impl FluentBar {
 
     pub fn color(mut self, color: Color) -> Self {
         self.border_color = BorderColor::all(color.with_alpha(0.3));
+        self
+    }
+
+    pub fn with_transform(mut self, transform: Transform) -> Self {
+        self.transform = transform;
         self
     }
 
