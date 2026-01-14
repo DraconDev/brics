@@ -1,3 +1,5 @@
+use bevy::prelude::*;
+
 /// A component for a tactical hexagonal grid.
 #[derive(Component, Clone, Debug)]
 pub struct HexGrid {

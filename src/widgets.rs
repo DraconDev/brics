@@ -180,6 +180,13 @@ impl FluentLabel {
 }
 
 /// A progress bar / telemetry indicator.
+#[derive(Component, Clone, Debug)]
+pub struct SegmentedBar {
+    pub chunks: usize,
+    pub current_chunk: usize,
+    pub pulsing: bool,
+}
+
 #[derive(Bundle, Clone, Debug)]
 pub struct FluentBar {
     pub node: Node,
@@ -250,6 +257,46 @@ impl FluentBar {
                 BackgroundColor::from(color),
             ))
             .id()
+    }
+
+    /// Spawns a segmented bar.
+    pub fn spawn_segmented(
+        self,
+        parent: &mut ChildSpawnerCommands,
+        color: Color,
+        chunks: usize,
+        current: usize,
+    ) -> Entity {
+        let mut entity = parent.spawn((
+            self.node.clone(),
+            self.background_color,
+            self.border_color,
+            SegmentedBar {
+                chunks,
+                current_chunk: current,
+                pulsing: false,
+            },
+        ));
+
+        entity.with_children(|p| {
+            for i in 0..chunks {
+                p.spawn((
+                    Node {
+                        width: Val::Percent(100.0 / chunks as f32 - 1.0),
+                        height: Val::Percent(100.0),
+                        margin: UiRect::horizontal(Val::Px(1.0)),
+                        ..default()
+                    },
+                    BackgroundColor::from(if i < current {
+                        color
+                    } else {
+                        color.with_alpha(0.1)
+                    }),
+                ));
+            }
+        });
+
+        entity.id()
     }
 }
 
