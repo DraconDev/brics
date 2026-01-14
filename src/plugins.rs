@@ -46,7 +46,7 @@ fn handle_tooltips(
             Interaction::Hovered => {
                 // Despawn old tooltip if any
                 for entity in tooltip_ui_q.iter() {
-                    commands.entity(entity).despawn_recursive();
+                    commands.entity(entity).despawn();
                 }
 
                 let pos = transform.translation();
