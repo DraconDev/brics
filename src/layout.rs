@@ -184,11 +184,6 @@ impl Row {
         self.node.height = h;
         self
     }
-
-    pub fn margin(mut self, margin: UiRect) -> Self {
-        self.node.margin = margin;
-        self
-    }
 }
 
 /// A spacer entity that expands to fill available space.
