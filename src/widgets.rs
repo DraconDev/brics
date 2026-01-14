@@ -8,7 +8,6 @@ pub struct FluentButton {
     pub node: Node,
     pub background_color: BackgroundColor,
     pub border_color: BorderColor,
-    pub border_radius: BorderRadius,
     pub global_transform: GlobalTransform,
     pub visibility: Visibility,
     pub inherited_visibility: InheritedVisibility,
@@ -25,11 +24,11 @@ impl Default for FluentButton {
                 align_items: AlignItems::Center,
                 border: UiRect::all(Val::Px(1.0)),
                 padding: UiRect::axes(Val::Px(12.0), Val::Px(8.0)), // Default comfy padding
+                border_radius: BorderRadius::all(Val::Px(4.0)),
                 ..default()
             },
             background_color: BackgroundColor(Color::NONE),
-            border_color: BorderColor(Color::WHITE),
-            border_radius: BorderRadius::all(Val::Px(4.0)),
+            border_color: BorderColor::all(Color::WHITE),
             global_transform: default(),
             visibility: default(),
             inherited_visibility: default(),
@@ -59,14 +58,14 @@ impl FluentButton {
 
     /// Sets the button's border color and width.
     pub fn border(mut self, color: Color, width: f32) -> Self {
-        self.border_color = BorderColor(color);
+        self.border_color = BorderColor::all(color);
         self.node.border = UiRect::all(Val::Px(width));
         self
     }
 
     /// Sets the border radius.
     pub fn rounded(mut self, px: f32) -> Self {
-        self.border_radius = BorderRadius::all(Val::Px(px));
+        self.node.border_radius = BorderRadius::all(Val::Px(px));
         self
     }
 
