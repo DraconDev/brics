@@ -56,6 +56,19 @@ impl FluentDigitalLabel {
     }
 }
 
+pub fn animate_scanner(
+    time: Res<Time>,
+    query: Query<(&Scanner, &ComputedNode, &GlobalTransform)>,
+    mut gizmos: Gizmos,
+) {
+    let t = time.elapsed_secs();
+    for (scanner, computed_node, transform) in query.iter() {
+        let size = computed_node.size();
+            continue;
+        }
+
+        digital.timer.tick(time.delta());
+
 pub fn update_digital_labels(time: Res<Time>, mut query: Query<(&mut DigitalLabel, &mut Text)>) {
     for (mut digital, mut text) in query.iter_mut() {
         if digital.finished {
