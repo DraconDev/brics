@@ -98,6 +98,27 @@ impl FluentButton {
         self
     }
 
+    pub fn grow(mut self, factor: f32) -> Self {
+        self.node.flex_grow = factor;
+        self
+    }
+
+    pub fn fill(mut self) -> Self {
+        self.node.width = Val::Percent(100.0);
+        self.node.height = Val::Percent(100.0);
+        self
+    }
+
+    pub fn width(mut self, w: Val) -> Self {
+        self.node.width = w;
+        self
+    }
+
+    pub fn height(mut self, h: Val) -> Self {
+        self.node.height = h;
+        self
+    }
+
     pub fn with_tooltip(self, parent: &mut ChildSpawnerCommands, text: impl Into<String>) -> Self {
         let parent_entity = parent.target_entity();
         parent
