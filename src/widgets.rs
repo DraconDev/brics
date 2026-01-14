@@ -225,3 +225,29 @@ impl FluentBar {
             .id()
     }
 }
+
+/// A simple clickable region without default styling.
+/// Use this for custom UI elements that need interaction.
+#[derive(Bundle, Clone, Debug, Default)]
+pub struct Clickable {
+    pub button: Button,
+    pub node: Node,
+    pub visibility: Visibility,
+    pub inherited_visibility: InheritedVisibility,
+    pub view_visibility: ViewVisibility,
+    pub transform: Transform,
+    pub global_transform: GlobalTransform,
+    pub background_color: BackgroundColor,
+    pub border_color: BorderColor,
+}
+
+impl Clickable {
+    pub fn new() -> Self {
+        Self::default()
+    }
+
+    pub fn with_transform(mut self, transform: Transform) -> Self {
+        self.transform = transform;
+        self
+    }
+}
