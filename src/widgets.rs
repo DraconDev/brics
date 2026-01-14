@@ -79,6 +79,16 @@ impl FluentButton {
         self.transform = transform;
         self
     }
+
+    pub fn column(mut self) -> Self {
+        self.node.flex_direction = FlexDirection::Column;
+        self
+    }
+
+    pub fn spread(mut self) -> Self {
+        self.node.justify_content = JustifyContent::SpaceBetween;
+        self
+    }
 }
 
 /// A fluent builder for creating Text.
