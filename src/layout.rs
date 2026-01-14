@@ -72,6 +72,11 @@ impl Col {
         self.node.align_items = AlignItems::FlexEnd;
         self
     }
+
+    pub fn with_transform(mut self, transform: Transform) -> Self {
+        self.transform = transform;
+        self
+    }
 }
 
 /// A helper bundle for a flexbox row (horizontal stack).
@@ -144,6 +149,11 @@ impl Row {
         self.node.height = h;
         self
     }
+
+    pub fn with_transform(mut self, transform: Transform) -> Self {
+        self.transform = transform;
+        self
+    }
 }
 
 /// A spacer entity that expands to fill available space.
@@ -166,6 +176,11 @@ impl Spacer {
             },
             ..default()
         }
+    }
+
+    pub fn with_transform(mut self, transform: Transform) -> Self {
+        self.transform = transform;
+        self
     }
 }
 
@@ -218,6 +233,11 @@ impl Grid {
     pub fn gap(mut self, px: f32) -> Self {
         self.node.row_gap = Val::Px(px);
         self.node.column_gap = Val::Px(px);
+        self
+    }
+
+    pub fn with_transform(mut self, transform: Transform) -> Self {
+        self.transform = transform;
         self
     }
 }
