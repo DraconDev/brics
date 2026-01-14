@@ -74,7 +74,7 @@ fn handle_tooltips(
             }
             Interaction::None => {
                 for entity in tooltip_ui_q.iter() {
-                    commands.entity(entity).despawn_recursive();
+                    commands.entity(entity).despawn();
                 }
             }
             _ => {}
