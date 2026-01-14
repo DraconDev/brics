@@ -4,8 +4,9 @@ use bevy::prelude::*;
 
 pub struct BricsPlugin;
 
+use crate::containers::FluentPanel;
 use crate::theme::COLOR_VOID;
-use crate::widgets::{FluentLabel, FluentPanel, Tooltip, TooltipUi};
+use crate::widgets::{FluentLabel, Tooltip, TooltipUi};
 
 impl Plugin for BricsPlugin {
     fn build(&self, app: &mut App) {
