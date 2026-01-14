@@ -228,8 +228,8 @@ impl Grid {
     /// This is the "Cheaty Grid" mode - just pour items in and they flow.
     pub fn responsive_cols(mut self, min_width_px: f32) -> Self {
         self.node.grid_template_columns = vec![GridTrack::minmax(
-            Val::Px(min_width_px),
-            Val::Fr(1.0),
+            MinTrackSizingFunction::Px(min_width_px),
+            MaxTrackSizingFunction::Fraction(1.0),
         )];
         self.node.grid_auto_rows = vec![GridTrack::auto()];
         self
