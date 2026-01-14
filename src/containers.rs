@@ -61,6 +61,11 @@ impl FluentPanel {
         self
     }
 
+    pub fn with_transform(mut self, transform: Transform) -> Self {
+        self.transform = transform;
+        self
+    }
+
     /// Spawns tactical brackets at the corners of this panel.
     pub fn with_brackets(
         self,
