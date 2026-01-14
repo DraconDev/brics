@@ -28,7 +28,7 @@ impl Default for FluentButton {
                 ..default()
             },
             background_color: BackgroundColor(Color::NONE),
-            border_color: BorderColor::all(Color::WHITE),
+            border_color: BorderColor(Color::WHITE),
             global_transform: default(),
             visibility: default(),
             inherited_visibility: default(),
@@ -58,7 +58,7 @@ impl FluentButton {
 
     /// Sets the button's border color and width.
     pub fn border(mut self, color: Color, width: f32) -> Self {
-        self.border_color = BorderColor::all(color);
+        self.border_color = BorderColor(color);
         self.node.border = UiRect::all(Val::Px(width));
         self
     }
@@ -152,7 +152,7 @@ impl FluentLabel {
     }
 
     pub fn centered(mut self) -> Self {
-        self.layout.justify = Justify::Center;
+        self.layout.justify = JustifyText::Center;
         self
     }
 
@@ -185,7 +185,7 @@ impl Default for FluentBar {
                 ..default()
             },
             background_color: BackgroundColor(Color::NONE),
-            border_color: BorderColor::all(COLOR_CYAN_DIM),
+            border_color: BorderColor(COLOR_CYAN_DIM),
             global_transform: default(),
             visibility: default(),
             inherited_visibility: default(),
@@ -207,7 +207,7 @@ impl FluentBar {
     }
 
     pub fn color(mut self, color: Color) -> Self {
-        self.border_color = BorderColor::all(color.with_alpha(0.3));
+        self.border_color = BorderColor(color.with_alpha(0.3));
         self
     }
 

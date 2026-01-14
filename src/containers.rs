@@ -45,7 +45,7 @@ impl FluentPanel {
     }
 
     pub fn border(mut self, color: Color, width: f32) -> Self {
-        self.border_color = BorderColor::all(color);
+        self.border_color = BorderColor(color);
         self.node.border = UiRect::all(Val::Px(width));
         self
     }
@@ -187,7 +187,7 @@ fn spawn_bracket(
             },
             ..default()
         },
-        BorderColor::all(color),
+        BorderColor(color),
     ));
 }
 
