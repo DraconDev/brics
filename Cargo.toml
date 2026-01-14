@@ -4,6 +4,6 @@ version = "0.1.16"
 edition = "2021"
 
 [dependencies]
-bevy = { version = "0.18.0" }
+bevy = { version = "0.18.0", default-features = false, features = ["bevy_ui", "bevy_core_pipeline", "bevy_render", "bevy_text", "bevy_asset"] }
 serde = { version = "1.0", features = ["derive"] }
 rand = "0.9"
