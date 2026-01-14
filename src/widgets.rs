@@ -147,6 +147,8 @@ impl FluentLabel {
 #[derive(Bundle, Clone, Debug)]
 pub struct FluentBar {
     pub node: Node,
+    pub background_color: BackgroundColor,
+    pub border_color: BorderColor,
     pub global_transform: GlobalTransform,
     pub visibility: Visibility,
     pub inherited_visibility: InheritedVisibility,
@@ -161,10 +163,10 @@ impl Default for FluentBar {
                 width: Val::Percent(100.0),
                 height: Val::Px(8.0),
                 border: UiRect::all(Val::Px(1.0)),
-                background_color: Color::NONE,
-                border_color: COLOR_CYAN_DIM,
                 ..default()
             },
+            background_color: BackgroundColor(Color::NONE),
+            border_color: BorderColor(COLOR_CYAN_DIM),
             global_transform: default(),
             visibility: default(),
             inherited_visibility: default(),
@@ -186,7 +188,7 @@ impl FluentBar {
     }
 
     pub fn color(mut self, color: Color) -> Self {
-        self.node.border_color = color.with_alpha(0.3);
+        self.border_color = BorderColor(color.with_alpha(0.3));
         self
     }
 
@@ -198,12 +200,14 @@ impl FluentBar {
         percent: f32,
     ) -> Entity {
         parent
-            .spawn(Node {
-                width: Val::Percent(percent.clamp(0.0, 100.0)),
-                height: Val::Percent(100.0),
-                background_color: color,
-                ..default()
-            })
+            .spawn((
+                Node {
+                    width: Val::Percent(percent.clamp(0.0, 100.0)),
+                    height: Val::Percent(100.0),
+                    ..default()
+                },
+                BackgroundColor(color),
+            ))
             .id()
     }
 }
