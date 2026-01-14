@@ -1,6 +1,14 @@
 use crate::theme::*;
 use bevy::prelude::*;
 
+/// A tactical tooltip.
+#[derive(Component, Clone, Debug)]
+pub struct Tooltip(pub String);
+
+/// Marker for the spawned tooltip UI.
+#[derive(Component)]
+pub struct TooltipUi;
+
 /// A fluent builder for creating Buttons descriptively.
 #[derive(Bundle, Clone, Debug)]
 pub struct FluentButton {
@@ -87,6 +95,14 @@ impl FluentButton {
 
     pub fn spread(mut self) -> Self {
         self.node.justify_content = JustifyContent::SpaceBetween;
+        self
+    }
+
+    pub fn with_tooltip(self, parent: &mut ChildSpawnerCommands, text: impl Into<String>) -> Self {
+        parent
+            .commands()
+            .entity(parent.id())
+            .insert(Tooltip(text.into()));
         self
     }
 }
