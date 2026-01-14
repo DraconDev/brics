@@ -7,4 +7,3 @@ pub mod theme;
 pub mod widgets;
 
 pub use plugins::BricsPlugin;
-pub mod probe_brics;
