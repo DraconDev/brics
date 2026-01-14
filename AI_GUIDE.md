@@ -42,8 +42,7 @@ AutoList::new()     // Vertical by default
 Grid::new()
     .cols(3)        // 3 equal columns (1fr 1fr 1fr)
     .gap(10.0)
-    // OR
-    .responsive_cols(100.0) // Auto-fit columns, min 100px wide
+    // .responsive_cols(100.0) // Auto-fit columns (WIP, use .cols() for now)
 ```
 
 ### `Spacer`
