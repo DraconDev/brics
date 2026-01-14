@@ -63,9 +63,9 @@ fn handle_tooltips(
                             position_type: PositionType::Absolute,
                             left: Val::Px(pos.x + 20.0),
                             top: Val::Px(pos.y - 40.0),
-                            z_index: ZIndex::Global(100),
                             ..default()
                         },
+                        ZIndex(100),
                         TooltipUi,
                     ))
                     .with_children(|p| {

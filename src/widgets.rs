@@ -99,9 +99,10 @@ impl FluentButton {
     }
 
     pub fn with_tooltip(self, parent: &mut ChildSpawnerCommands, text: impl Into<String>) -> Self {
+        let parent_entity = parent.target_entity();
         parent
             .commands()
-            .entity(parent.id())
+            .entity(parent_entity)
             .insert(Tooltip(text.into()));
         self
     }
