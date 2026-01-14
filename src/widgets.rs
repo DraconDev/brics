@@ -152,7 +152,7 @@ impl FluentLabel {
     }
 
     pub fn centered(mut self) -> Self {
-        self.layout.justify = JustifyText::Center;
+        self.layout.justify = Justify::Center;
         self
     }
 
