@@ -12,7 +12,14 @@ impl Plugin for BricsPlugin {
     fn build(&self, app: &mut App) {
         app.add_systems(
             Update,
-            (handle_fluent_scroll, animate_fluent_scroll, handle_tooltips),
+            (
+                handle_fluent_scroll,
+                animate_fluent_scroll,
+                crate::plugins::handle_tooltips,
+                crate::scan::animate_scanner,
+                crate::digital::update_digital_labels,
+                crate::tech::draw_hex_grids,
+            ),
         );
     }
 }
