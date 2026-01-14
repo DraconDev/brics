@@ -39,9 +39,12 @@ impl TechGizmos {
     }
 }
 
-pub fn draw_hex_grids(query: Query<(&HexGrid, &Node, &GlobalTransform)>, mut gizmos: Gizmos) {
-    for (grid, node, transform) in query.iter() {
-        let size = node.size();
+pub fn draw_hex_grids(
+    query: Query<(&HexGrid, &ComputedNode, &GlobalTransform)>,
+    mut gizmos: Gizmos,
+) {
+    for (grid, computed_node, transform) in query.iter() {
+        let size = computed_node.size();
         let center = transform.translation().truncate();
         let half_size = size / 2.0;
 
