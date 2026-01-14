@@ -27,8 +27,8 @@ impl Default for FluentButton {
                 border_radius: BorderRadius::all(Val::Px(4.0)),
                 ..default()
             },
-            background_color: BackgroundColor(Color::NONE),
-            border_color: BorderColor(Color::WHITE),
+            background_color: Color::NONE.into(),
+            border_color: Color::WHITE.into(),
             global_transform: default(),
             visibility: default(),
             inherited_visibility: default(),
@@ -52,13 +52,13 @@ impl FluentButton {
 
     /// Sets the button's background color.
     pub fn bg(mut self, color: Color) -> Self {
-        self.background_color = BackgroundColor(color);
+        self.background_color = color.into();
         self
     }
 
     /// Sets the button's border color and width.
     pub fn border(mut self, color: Color, width: f32) -> Self {
-        self.border_color = BorderColor(color);
+        self.border_color = color.into();
         self.node.border = UiRect::all(Val::Px(width));
         self
     }
@@ -184,8 +184,8 @@ impl Default for FluentBar {
                 border: UiRect::all(Val::Px(1.0)),
                 ..default()
             },
-            background_color: BackgroundColor(Color::NONE),
-            border_color: BorderColor(COLOR_CYAN_DIM),
+            background_color: Color::NONE.into(),
+            border_color: COLOR_CYAN_DIM.into(),
             global_transform: default(),
             visibility: default(),
             inherited_visibility: default(),
@@ -207,7 +207,7 @@ impl FluentBar {
     }
 
     pub fn color(mut self, color: Color) -> Self {
-        self.border_color = BorderColor(color.with_alpha(0.3));
+        self.border_color = color.with_alpha(0.3).into();
         self
     }
 
@@ -230,7 +230,7 @@ impl FluentBar {
                     height: Val::Percent(100.0),
                     ..default()
                 },
-                BackgroundColor(color),
+                BackgroundColor::from(color),
             ))
             .id()
     }

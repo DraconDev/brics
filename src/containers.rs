@@ -23,7 +23,7 @@ impl Default for FluentPanel {
                 border_radius: BorderRadius::all(Val::Px(2.0)),
                 ..default()
             },
-            background_color: BackgroundColor(COLOR_VOID.with_alpha(0.95)),
+            background_color: COLOR_VOID.with_alpha(0.95).into(),
             border_color: BorderColor::default(),
             transform: default(),
             global_transform: default(),
@@ -40,12 +40,12 @@ impl FluentPanel {
     }
 
     pub fn bg(mut self, color: Color) -> Self {
-        self.background_color = BackgroundColor(color);
+        self.background_color = color.into();
         self
     }
 
     pub fn border(mut self, color: Color, width: f32) -> Self {
-        self.border_color = BorderColor(color);
+        self.border_color = color.into();
         self.node.border = UiRect::all(Val::Px(width));
         self
     }
@@ -137,7 +137,7 @@ impl FluentPanel {
                     top: Val::Percent(i as f32 * (100.0 / count as f32)),
                     ..default()
                 },
-                BackgroundColor(color.with_alpha(0.05)),
+                BackgroundColor::from(color.with_alpha(0.05)),
             ));
         }
         self
@@ -187,7 +187,7 @@ fn spawn_bracket(
             },
             ..default()
         },
-        BorderColor(color),
+        BorderColor::from(color),
     ));
 }
 
