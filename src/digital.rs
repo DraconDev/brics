@@ -82,7 +82,10 @@ pub fn update_digital_labels(time: Res<Time>, mut query: Query<(&mut DigitalLabe
                 }
             }
             DigitalEffect::Glitch { intensity } => {
-                if digital.timer.finished() {
+                if digital.timer.just_finished()
+                    || (digital.timer.mode() == TimerMode::Once
+                        && digital.timer.elapsed() >= digital.timer.duration())
+                {
                     text.0 = digital.full_text.clone();
                     digital.finished = true;
                 } else {
