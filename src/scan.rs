@@ -57,12 +57,12 @@ impl FluentScanner {
 
 pub fn animate_scanner(
     time: Res<Time>,
-    query: Query<(&Scanner, &Node, &GlobalTransform)>,
+    query: Query<(&Scanner, &ComputedNode, &GlobalTransform)>,
     mut gizmos: Gizmos,
 ) {
     let t = time.elapsed_secs();
-    for (scanner, node, transform) in query.iter() {
-        let size = node.size();
+    for (scanner, computed_node, transform) in query.iter() {
+        let size = computed_node.size();
         let center = transform.translation().truncate();
         let half_size = size / 2.0;
 

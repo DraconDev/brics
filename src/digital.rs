@@ -1,6 +1,5 @@
 use crate::widgets::FluentLabel;
 use bevy::prelude::*;
-use std::time::Duration;
 
 #[derive(Clone, Debug, PartialEq)]
 pub enum DigitalEffect {
@@ -56,19 +55,6 @@ impl FluentDigitalLabel {
     }
 }
 
-pub fn animate_scanner(
-    time: Res<Time>,
-    query: Query<(&Scanner, &ComputedNode, &GlobalTransform)>,
-    mut gizmos: Gizmos,
-) {
-    let t = time.elapsed_secs();
-    for (scanner, computed_node, transform) in query.iter() {
-        let size = computed_node.size();
-            continue;
-        }
-
-        digital.timer.tick(time.delta());
-
 pub fn update_digital_labels(time: Res<Time>, mut query: Query<(&mut DigitalLabel, &mut Text)>) {
     for (mut digital, mut text) in query.iter_mut() {
         if digital.finished {
@@ -82,7 +68,6 @@ pub fn update_digital_labels(time: Res<Time>, mut query: Query<(&mut DigitalLabe
                 if digital.timer.just_finished() {
                     digital.char_index += 1;
                     if digital.char_index <= digital.full_text.len() {
-                        // Correctly handle multi-byte characters by finding the byte index
                         let end = digital
                             .full_text
                             .char_indices()
@@ -101,7 +86,6 @@ pub fn update_digital_labels(time: Res<Time>, mut query: Query<(&mut DigitalLabe
                     text.0 = digital.full_text.clone();
                     digital.finished = true;
                 } else {
-                    // Randomize characters for glitch effect
                     let mut glitched = String::new();
                     for _ in 0..digital.full_text.chars().count() {
                         if rand::random::<f32>() < intensity {
