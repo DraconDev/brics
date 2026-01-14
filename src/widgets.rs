@@ -165,7 +165,7 @@ impl Default for FluentBar {
                 ..default()
             },
             background_color: BackgroundColor(Color::NONE),
-            border_color: BorderColor(COLOR_CYAN_DIM),
+            border_color: BorderColor::all(COLOR_CYAN_DIM),
             global_transform: default(),
             visibility: default(),
             inherited_visibility: default(),
@@ -187,7 +187,7 @@ impl FluentBar {
     }
 
     pub fn color(mut self, color: Color) -> Self {
-        self.border_color = BorderColor(color.with_alpha(0.3));
+        self.border_color = BorderColor::all(color.with_alpha(0.3));
         self
     }
 
