@@ -1,0 +1,11 @@
+/home/dracon/Dev/Junk-Runner/brics/target/debug/deps/bevy_audio-0f54c7b2ca60e454.d: /home/dracon/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/bevy_audio-0.17.3/src/lib.rs /home/dracon/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/bevy_audio-0.17.3/src/audio.rs /home/dracon/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/bevy_audio-0.17.3/src/audio_output.rs /home/dracon/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/bevy_audio-0.17.3/src/audio_source.rs /home/dracon/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/bevy_audio-0.17.3/src/pitch.rs /home/dracon/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/bevy_audio-0.17.3/src/sinks.rs /home/dracon/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/bevy_audio-0.17.3/src/volume.rs
+
+/home/dracon/Dev/Junk-Runner/brics/target/debug/deps/libbevy_audio-0f54c7b2ca60e454.rmeta: /home/dracon/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/bevy_audio-0.17.3/src/lib.rs /home/dracon/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/bevy_audio-0.17.3/src/audio.rs /home/dracon/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/bevy_audio-0.17.3/src/audio_output.rs /home/dracon/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/bevy_audio-0.17.3/src/audio_source.rs /home/dracon/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/bevy_audio-0.17.3/src/pitch.rs /home/dracon/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/bevy_audio-0.17.3/src/sinks.rs /home/dracon/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/bevy_audio-0.17.3/src/volume.rs
+
+/home/dracon/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/bevy_audio-0.17.3/src/lib.rs:
+/home/dracon/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/bevy_audio-0.17.3/src/audio.rs:
+/home/dracon/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/bevy_audio-0.17.3/src/audio_output.rs:
+/home/dracon/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/bevy_audio-0.17.3/src/audio_source.rs:
+/home/dracon/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/bevy_audio-0.17.3/src/pitch.rs:
+/home/dracon/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/bevy_audio-0.17.3/src/sinks.rs:
+/home/dracon/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/bevy_audio-0.17.3/src/volume.rs:

@@ -1,0 +1,1 @@
+{"rustc":4758242423518056681,"features":"[]","declared_features":"[]","target":14600502665603289525,"profile":8583744442196451825,"path":15490749096609575213,"deps":[],"local":[{"CheckDepInfo":{"dep_info":"debug/.fingerprint/bevy_ptr-38a84f16077bc887/dep-lib-bevy_ptr","checksum":false}}],"rustflags":["-C","link-arg=-fuse-ld=lld"],"config":2069994364910194474,"compile_kind":0}

@@ -1,0 +1,10 @@
+/home/dracon/Dev/Junk-Runner/brics/target/debug/deps/bevy_sprite-40a4f25bfb1ba895.d: /home/dracon/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/bevy_sprite-0.17.3/src/lib.rs /home/dracon/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/bevy_sprite-0.17.3/src/sprite.rs /home/dracon/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/bevy_sprite-0.17.3/src/text2d.rs /home/dracon/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/bevy_sprite-0.17.3/src/texture_slice/mod.rs /home/dracon/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/bevy_sprite-0.17.3/src/texture_slice/border_rect.rs /home/dracon/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/bevy_sprite-0.17.3/src/texture_slice/slicer.rs
+
+/home/dracon/Dev/Junk-Runner/brics/target/debug/deps/libbevy_sprite-40a4f25bfb1ba895.rmeta: /home/dracon/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/bevy_sprite-0.17.3/src/lib.rs /home/dracon/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/bevy_sprite-0.17.3/src/sprite.rs /home/dracon/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/bevy_sprite-0.17.3/src/text2d.rs /home/dracon/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/bevy_sprite-0.17.3/src/texture_slice/mod.rs /home/dracon/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/bevy_sprite-0.17.3/src/texture_slice/border_rect.rs /home/dracon/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/bevy_sprite-0.17.3/src/texture_slice/slicer.rs
+
+/home/dracon/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/bevy_sprite-0.17.3/src/lib.rs:
+/home/dracon/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/bevy_sprite-0.17.3/src/sprite.rs:
+/home/dracon/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/bevy_sprite-0.17.3/src/text2d.rs:
+/home/dracon/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/bevy_sprite-0.17.3/src/texture_slice/mod.rs:
+/home/dracon/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/bevy_sprite-0.17.3/src/texture_slice/border_rect.rs:
+/home/dracon/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/bevy_sprite-0.17.3/src/texture_slice/slicer.rs:

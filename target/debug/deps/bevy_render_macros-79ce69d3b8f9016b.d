@@ -1,0 +1,9 @@
+/home/dracon/Dev/Junk-Runner/brics/target/debug/deps/bevy_render_macros-79ce69d3b8f9016b.d: /home/dracon/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/bevy_render_macros-0.17.3/src/lib.rs /home/dracon/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/bevy_render_macros-0.17.3/src/as_bind_group.rs /home/dracon/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/bevy_render_macros-0.17.3/src/extract_component.rs /home/dracon/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/bevy_render_macros-0.17.3/src/extract_resource.rs /home/dracon/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/bevy_render_macros-0.17.3/src/specializer.rs
+
+/home/dracon/Dev/Junk-Runner/brics/target/debug/deps/libbevy_render_macros-79ce69d3b8f9016b.so: /home/dracon/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/bevy_render_macros-0.17.3/src/lib.rs /home/dracon/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/bevy_render_macros-0.17.3/src/as_bind_group.rs /home/dracon/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/bevy_render_macros-0.17.3/src/extract_component.rs /home/dracon/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/bevy_render_macros-0.17.3/src/extract_resource.rs /home/dracon/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/bevy_render_macros-0.17.3/src/specializer.rs
+
+/home/dracon/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/bevy_render_macros-0.17.3/src/lib.rs:
+/home/dracon/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/bevy_render_macros-0.17.3/src/as_bind_group.rs:
+/home/dracon/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/bevy_render_macros-0.17.3/src/extract_component.rs:
+/home/dracon/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/bevy_render_macros-0.17.3/src/extract_resource.rs:
+/home/dracon/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/bevy_render_macros-0.17.3/src/specializer.rs:

@@ -1,0 +1,13 @@
+/home/dracon/Dev/Junk-Runner/brics/target/debug/deps/lewton-fa236fe5311c16f2.d: /home/dracon/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/lewton-0.10.2/src/lib.rs /home/dracon/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/lewton-0.10.2/src/header.rs /home/dracon/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/lewton-0.10.2/src/header_cached.rs /home/dracon/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/lewton-0.10.2/src/huffman_tree.rs /home/dracon/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/lewton-0.10.2/src/imdct.rs /home/dracon/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/lewton-0.10.2/src/audio.rs /home/dracon/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/lewton-0.10.2/src/bitpacking.rs /home/dracon/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/lewton-0.10.2/src/inside_ogg.rs /home/dracon/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/lewton-0.10.2/src/samples.rs
+
+/home/dracon/Dev/Junk-Runner/brics/target/debug/deps/liblewton-fa236fe5311c16f2.rmeta: /home/dracon/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/lewton-0.10.2/src/lib.rs /home/dracon/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/lewton-0.10.2/src/header.rs /home/dracon/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/lewton-0.10.2/src/header_cached.rs /home/dracon/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/lewton-0.10.2/src/huffman_tree.rs /home/dracon/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/lewton-0.10.2/src/imdct.rs /home/dracon/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/lewton-0.10.2/src/audio.rs /home/dracon/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/lewton-0.10.2/src/bitpacking.rs /home/dracon/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/lewton-0.10.2/src/inside_ogg.rs /home/dracon/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/lewton-0.10.2/src/samples.rs
+
+/home/dracon/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/lewton-0.10.2/src/lib.rs:
+/home/dracon/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/lewton-0.10.2/src/header.rs:
+/home/dracon/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/lewton-0.10.2/src/header_cached.rs:
+/home/dracon/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/lewton-0.10.2/src/huffman_tree.rs:
+/home/dracon/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/lewton-0.10.2/src/imdct.rs:
+/home/dracon/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/lewton-0.10.2/src/audio.rs:
+/home/dracon/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/lewton-0.10.2/src/bitpacking.rs:
+/home/dracon/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/lewton-0.10.2/src/inside_ogg.rs:
+/home/dracon/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/lewton-0.10.2/src/samples.rs:

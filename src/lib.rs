@@ -1,8 +1,9 @@
-pub mod charts;
-pub mod events;
-pub mod form;
-pub mod interact;
-pub mod markdown;
-pub mod tables;
-pub mod terminal;
-pub mod text;
+pub mod cards;
+pub mod containers;
+pub mod layout;
+pub mod plugins;
+pub mod tech;
+pub mod theme;
+pub mod widgets;
+
+pub use plugins::BricsPlugin;
