@@ -77,6 +77,21 @@ impl Col {
         self.transform = transform;
         self
     }
+
+    pub fn width(mut self, w: Val) -> Self {
+        self.node.width = w;
+        self
+    }
+
+    pub fn height(mut self, h: Val) -> Self {
+        self.node.height = h;
+        self
+    }
+
+    pub fn margin(mut self, margin: UiRect) -> Self {
+        self.node.margin = margin;
+        self
+    }
 }
 
 /// A helper bundle for a flexbox row (horizontal stack).
@@ -152,6 +167,21 @@ impl Row {
 
     pub fn with_transform(mut self, transform: Transform) -> Self {
         self.transform = transform;
+        self
+    }
+
+    pub fn width(mut self, w: Val) -> Self {
+        self.node.width = w;
+        self
+    }
+
+    pub fn height(mut self, h: Val) -> Self {
+        self.node.height = h;
+        self
+    }
+
+    pub fn margin(mut self, margin: UiRect) -> Self {
+        self.node.margin = margin;
         self
     }
 }
