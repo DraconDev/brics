@@ -179,6 +179,26 @@ impl FluentLabel {
     }
 }
 
+pub fn update_segmented_bars(
+    time: Res<Time>,
+    mut query: Query<(&SegmentedBar, &mut Children)>,
+    mut bg_query: Query<&mut BackgroundColor>,
+) {
+    let t = time.elapsed_secs();
+    for (bar, children) in query.iter_mut() {
+        if bar.pulsing {
+            let alpha = 0.5 + 0.5 * (t * 5.0).sin();
+            for (i, child) in children.iter().enumerate() {
+                if i < bar.current_chunk {
+                    if let Ok(mut bg) = bg_query.get_mut(*child) {
+                        bg.0 = bg.0.with_alpha(alpha);
+                    }
+                }
+            }
+        }
+    }
+}
+
 /// A progress bar / telemetry indicator.
 #[derive(Component, Clone, Debug)]
 pub struct SegmentedBar {
@@ -323,5 +343,25 @@ impl Clickable {
     pub fn with_transform(mut self, transform: Transform) -> Self {
         self.transform = transform;
         self
+    }
+}
+
+pub fn update_segmented_bars(
+    time: Res<Time>,
+    mut query: Query<(&SegmentedBar, &mut Children)>,
+    mut bg_query: Query<&mut BackgroundColor>,
+) {
+    let t = time.elapsed_secs();
+    for (bar, children) in query.iter_mut() {
+        if bar.pulsing {
+            let alpha = 0.5 + 0.5 * (t * 5.0).sin();
+            for (i, child) in children.iter().enumerate() {
+                if i < bar.current_chunk {
+                    if let Ok(mut bg) = bg_query.get_mut(*child) {
+                        bg.0 = bg.0.with_alpha(alpha);
+                    }
+                }
+            }
+        }
     }
 }
