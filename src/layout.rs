@@ -241,6 +241,27 @@ impl Grid {
         self
     }
 
+    pub fn grow(mut self, factor: f32) -> Self {
+        self.node.flex_grow = factor;
+        self
+    }
+
+    pub fn width(mut self, w: Val) -> Self {
+        self.node.width = w;
+        self
+    }
+
+    pub fn height(mut self, h: Val) -> Self {
+        self.node.height = h;
+        self
+    }
+
+    pub fn fill(mut self) -> Self {
+        self.node.width = Val::Percent(100.0);
+        self.node.height = Val::Percent(100.0);
+        self
+    }
+
     pub fn gap(mut self, px: f32) -> Self {
         self.node.row_gap = Val::Px(px);
         self.node.column_gap = Val::Px(px);
