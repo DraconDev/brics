@@ -73,6 +73,11 @@ impl Col {
         self
     }
 
+    pub fn margin(mut self, margin: UiRect) -> Self {
+        self.node.margin = margin;
+        self
+    }
+
     pub fn with_transform(mut self, transform: Transform) -> Self {
         self.transform = transform;
         self
@@ -165,6 +170,11 @@ impl Row {
         self
     }
 
+    pub fn margin(mut self, margin: UiRect) -> Self {
+        self.node.margin = margin;
+        self
+    }
+
     pub fn with_transform(mut self, transform: Transform) -> Self {
         self.transform = transform;
         self
@@ -206,6 +216,11 @@ impl Spacer {
             },
             ..default()
         }
+    }
+
+    pub fn margin(mut self, margin: UiRect) -> Self {
+        self.node.margin = margin;
+        self
     }
 
     pub fn with_transform(mut self, transform: Transform) -> Self {
@@ -295,6 +310,11 @@ impl Grid {
     pub fn gap(mut self, px: f32) -> Self {
         self.node.row_gap = Val::Px(px);
         self.node.column_gap = Val::Px(px);
+        self
+    }
+
+    pub fn margin(mut self, margin: UiRect) -> Self {
+        self.node.margin = margin;
         self
     }
 
