@@ -7,7 +7,6 @@ pub struct FluentPanel {
     pub node: Node,
     pub background_color: BackgroundColor,
     pub border_color: BorderColor,
-    pub border_radius: BorderRadius,
     pub transform: Transform,
     pub global_transform: GlobalTransform,
     pub visibility: Visibility,
@@ -26,7 +25,6 @@ impl Default for FluentPanel {
             },
             background_color: BackgroundColor(COLOR_VOID.with_alpha(0.95)),
             border_color: BorderColor::default(),
-            border_radius: BorderRadius::all(Val::Px(2.0)),
             transform: default(),
             global_transform: default(),
             visibility: default(),
@@ -47,7 +45,7 @@ impl FluentPanel {
     }
 
     pub fn border(mut self, color: Color, width: f32) -> Self {
-        self.border_color = BorderColor(color);
+        self.border_color = BorderColor::all(color);
         self.node.border = UiRect::all(Val::Px(width));
         self
     }
