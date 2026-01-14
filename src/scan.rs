@@ -70,15 +70,15 @@ pub fn animate_scanner(
         let offset = (t * scanner.speed * 50.0) % scanner.spacing;
 
         for i in 0..scanner.line_count {
-            let pos = -half_size + offset + (i as f32 * scanner.spacing);
-
             if scanner.vertical {
+                let pos = -half_size.x + offset + (i as f32 * scanner.spacing);
                 if pos < half_size.x && pos > -half_size.x {
                     let p1 = center + Vec2::new(pos, -half_size.y);
                     let p2 = center + Vec2::new(pos, half_size.y);
                     gizmos.line_2d(p1, p2, scanner.color);
                 }
             } else {
+                let pos = -half_size.y + offset + (i as f32 * scanner.spacing);
                 if pos < half_size.y && pos > -half_size.y {
                     let p1 = center + Vec2::new(-half_size.x, pos);
                     let p2 = center + Vec2::new(half_size.x, pos);
